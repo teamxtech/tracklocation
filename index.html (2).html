@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message</title>
+  <style>
+    
+    body{
+      margin: 0;
+      height: 100vh;
+      width:100%
+    }
+
+    h1{
+      margin-left: 20px;
+      font-size: 20px;
+    }
+    input, button{
+      margin-left: 25px;
+      margin-top: 30px;
+    }
+    .mbox{
+      width: 100%;
+      height: 80px;
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      bottom: 0;
+      align-items: center;
+    }
+
+    .outputbox{
+      border: 2px solid blue;
+      height: 50px;
+      margin-left: 80%;
+      border-radius: 15px;
+    }
+    .output{
+      display: flex;
+      justify-content: center;
+    }
+  
+  </style>
+</head>
+<body>
+
+  <h1>Hello! What is your request?</h1>
+   
+  <div class="mbox">
+  <input type="text" id="usermessage" placeholder="send a message"/>
+  <Button id="button">Send</Button>
+</div>
+
+   <div class="outputbox">
+  <p id="messagebox" class="output" id="output1">Message Box...</p>
+</div>
+
+  <script>
+
+    const button = document.getElementById('button');
+    const usermessage = document.getElementById('usermessage');
+    const messagebox = document.getElementById('messagebox');
+
+    function messagebox(inputmessagebox){
+      messagebox.innertext = inputmessagebox
+    }
+    button.addEventListener('click', () =>{
+      messagebox(usermessage,value)
+    })
+
+  </script>
+  
+</body>
+</html>
